@@ -4,18 +4,18 @@ import pymysql
 class PybaDatabase:
     def __init__(self):
         # local
-        self.host = "localhost"
-        self.port = 3307
-        self.user = "root"
-        self.password = "root"
-        self.database = "testdb"
-
-        # heroku
-        """ self.host = "localhost"
+        """self.host = "localhost"
         self.port = 3307
         self.user = "root"
         self.password = "root"
         self.database = "testdb" """
+
+        # heroku
+        self.host = "us-cdbr-east-04.cleardb.com"
+        self.port = 3306
+        self.user = "b7ce8e7a0ee144"
+        self.password = "331fda2d"
+        self.database = "heroku_4b2a7be403d7abc"
 
         self.connection = self.createConnection()
         self.cursor = self.createCursor()
